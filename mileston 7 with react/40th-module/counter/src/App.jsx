@@ -11,7 +11,7 @@ function App() {
   }
   return (
     <>
-      <button className={`${dekhaise ? "dekhaise1" : "nondekhaise"}`} onClick={handelClick}>{dekhaise ? 'complete' : 'go away'}</button >
+      <button className={`${dekhaise ? "dekhaise1" : "nondekhaise"}`} style={{ color: dekhaise ? 'black' : 'white' }}onClick={handelClick}>{dekhaise ? 'complete' : 'go away'}</button >
       {dekhaise ? 'ami dekhsi' : 'kisui nai'}
       < h1 > Vite + React</h1 >
       <Country></Country>
