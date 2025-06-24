@@ -1,13 +1,17 @@
 
 import './App.css'
+import Header from './Component/Header/Header'
+import Blogs from './Component/Blogs/Blogs'
 
 function App() {
- 
+
 
   return (
     <>
-      <h1 className='bg-gray-300 font-extrabold text-6xl'>Knowlage cafe</h1>
-      <p className='text-orange-600 text-center'>this name this best real</p>
+     <div className='max-w-7xl mx-auto mt-4 items-center'>
+       <Header></Header>
+       <Blogs></Blogs>
+     </div>
     </>
   )
 }
