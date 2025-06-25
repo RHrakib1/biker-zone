@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Blog from './Blog'
 
-export default function Blogs({ heandelbookmarks }) {
+export default function Blogs({ heandelbookmarks,heandleReading }) {
     const [blogs, setblogs] = useState([])
     useEffect(() => {
         fetch('blogs.json')
@@ -14,6 +14,7 @@ export default function Blogs({ heandelbookmarks }) {
             {
                 blogs.map(b => <Blog
                     heandelbookmarks={heandelbookmarks}
+                    heandleReading={heandleReading}
                     b={b}
                 ></Blog>)
             }

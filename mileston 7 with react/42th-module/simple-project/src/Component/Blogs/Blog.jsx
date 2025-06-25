@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaRegBookmark } from "react-icons/fa6";
 
-export default function Blog({ b,heandelbookmarks }) {
+export default function Blog({ b, heandelbookmarks, heandleReading }) {
     const { id, author_img, title, author, cover, reading_time, post_date, hashtag } = b
     return (
         <div className='mb-20'>
@@ -16,11 +16,12 @@ export default function Blog({ b,heandelbookmarks }) {
                 </div>
                 <div className='flex gap-2 items-center'>
                     <p>{reading_time} min read</p>
-                    <button onClick={()=>heandelbookmarks(b)} className='text-red-700 text-xl'><FaRegBookmark /></button>
+                    <button onClick={() => heandelbookmarks(b)} className='text-red-700 text-xl'><FaRegBookmark /></button>
                 </div>
             </div>
             <h1 className='text-4xl font-bold'>{title}</h1>
-            <a>{hashtag}</a>
+            <a>{hashtag}</a><br />
+            <button className='text-sm text-fuchsia-500' onClick={() => heandleReading(reading_time)}><a>Mark as read</a></button>
         </div>
     )
 }
