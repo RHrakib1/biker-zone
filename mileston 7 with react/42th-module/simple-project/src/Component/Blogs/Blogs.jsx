@@ -9,7 +9,7 @@ export default function Blogs() {
             .then(data => setblogs(data))
     }, [])
     return (
-        <div>
+        <div className='md:w-2/3'>
             <h1>calculatoin:{blogs.length}</h1>
             {
                 blogs.map(b => <Blog b={b}></Blog>)
