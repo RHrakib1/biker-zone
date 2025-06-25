@@ -21,7 +21,7 @@ export default function Blog({ b, heandelbookmarks, heandleReading }) {
             </div>
             <h1 className='text-4xl font-bold'>{title}</h1>
             <a>{hashtag}</a><br />
-            <button className='text-sm text-fuchsia-500' onClick={() => heandleReading(reading_time)}><a>Mark as read</a></button>
+            <button className='text-sm text-fuchsia-500' onClick={() => heandleReading(reading_time,id)}><a>Mark as read</a></button>
         </div>
     )
 }
