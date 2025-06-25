@@ -16,7 +16,7 @@ export default function Blog({ b,heandelbookmarks }) {
                 </div>
                 <div className='flex gap-2 items-center'>
                     <p>{reading_time} min read</p>
-                    <button onClick={heandelbookmarks} className='text-red-700 text-xl'><FaRegBookmark /></button>
+                    <button onClick={()=>heandelbookmarks(b)} className='text-red-700 text-xl'><FaRegBookmark /></button>
                 </div>
             </div>
             <h1 className='text-4xl font-bold'>{title}</h1>
